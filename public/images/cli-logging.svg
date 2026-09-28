@@ -1,0 +1,13 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="8" width="112" height="112" rx="6" stroke="white" stroke-width="5" fill="none"/>
+  <line x1="8" x2="120" y1="24" y2="24" stroke="white" stroke-width="4"/>
+  <text x="20" y="52" font-family="monospace" font-size="18" font-weight="bold" fill="white">
+    > INFO
+  </text>
+  <text x="20" y="78" font-family="monospace" font-size="18" font-weight="bold" fill="white">
+    > WARN
+  </text>
+  <text x="20" y="104" font-family="monospace" font-size="18" font-weight="bold" fill="white">
+    > FAIL
+  </text>
+</svg>

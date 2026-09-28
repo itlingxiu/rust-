@@ -1,0 +1,117 @@
+/* 官网样式之上的少量补充：中文回退字体、页脚吸底、无障碍与安装页平台切换 */
+
+body {
+  font-family: "Fira Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+}
+
+header h1 {
+  font-family: "Alfa Slab One", "Songti SC", "Noto Serif SC", "SimSun", serif;
+}
+
+.layout-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-root > main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.rust-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.rust-page > section:last-child {
+  flex: 1;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: #ffc832;
+  color: #2a3439;
+  padding: 0.5rem 1rem;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+html[data-platform='win'] #platform-instructions-unix,
+html[data-platform='win'] #platform-instructions-default,
+html[data-platform='unix'] #platform-instructions-win,
+html[data-platform='unix'] #platform-instructions-default,
+html[data-platform='win'] .platform-specific.not-win,
+html[data-platform='unix'] .platform-specific.win {
+  display: none !important;
+}
+
+html[data-platform='win'] #platform-instructions-win,
+html[data-platform='unix'] #platform-instructions-unix,
+html[data-platform='win'] .platform-specific.win {
+  display: block !important;
+}
+
+.error-panel {
+  text-align: center;
+  padding: 4rem 1rem 6rem;
+}
+
+.error-panel__code {
+  margin: 0;
+  color: #a72145;
+  font-family: "Alfa Slab One", serif;
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+.error-panel__title {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.error-panel__description {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+}
+
+.button-home {
+  display: inline-block;
+  width: auto;
+  background: #ffc832;
+  color: #2a3439;
+  border: 1px solid #ffc832;
+  border-radius: 4px;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-home:hover,
+.button-home:focus-visible {
+  border-color: #2a3439;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
